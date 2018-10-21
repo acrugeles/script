@@ -5,3 +5,4 @@ apt-get install -y build-essential
 apt-get install -y openssh-server
 apt-get install -y nfs-kernel-server
 apt-get install -y nfs-common 
+echo holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

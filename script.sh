@@ -3,15 +3,15 @@ echo Adriana Rugeles, Andres Concha y Maximiliam Garcia
 echo installing dependencies
 echo ..................................................
 
-sudo apt-get install -y python-setuptools
+
+sudo apt-get install -y python
+sudo apt-get install -y python-setuptools python-dev build-essential
 sudo easy_install pip
 sudo pip install mpi4py
 #apt-get install -y build-essential
 #apt-get install -y openssh-server
 #apt-get install -y nfs-kernel-server
 #apt-get install -y nfs-common 
-sudo apt-get install -y python
-sudo apt-get install -y python-mpi4py
 
 #wget http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1.tar.gz
 #tar -xzf mpich-3.2.1.tar.gz

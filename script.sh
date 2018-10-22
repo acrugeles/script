@@ -17,21 +17,21 @@ echo ...................................................
 echo configuring hosts
 echo ...................................................
 ip addr show
-#read -p "ip_address: " ip_address
-#read -p"identificador: " host_name
-#concat="$ip_address $host_name"
-#echo "10.0.2.5 master"| tee --append /etc/hosts 
-#echo $concat | tee --append /etc/hosts
+read -p "ip_address: " ip_address
+read -p"identificador: " host_name
+concat="$ip_address $host_name"
+echo "10.0.2.5 master"| tee --append /etc/hosts 
+echo $concat | tee --append /etc/hosts
 echo ..................................................
 echo  mpi
 echo ..................................................
 sudo adduser mpiuser
 sudo usermod -aG sudo,adm mpiuser
-sudo -i -u mpiuser ssh-keygen -b 4096 -C "" -P "" -f "/home/mpiuser/.ssh/id_rsa" -q
-sudo -i -u mpiuser ssh-copy-id master
-sudo -i -u mpiuser ssh master "echo maquina4 | sudo -S -- sh -C 'echo $concat >> /etc/hosts'"
+#sudo -i -u mpiuser ssh-keygen -b 4096 -C "" -P "" -f "/home/mpiuser/.ssh/id_rsa" -q
+#sudo -i -u mpiuser ssh-copy-id master
+#sudo -i -u mpiuser ssh master "echo maquina4 | sudo -S -- sh -C 'echo $concat >> /etc/hosts'"
 echo .................................................
-mkdir /home/mpiuser/cloud
+#mkdir /home/mpiuser/cloud
 sudo mount -t nfs master:/home/mpiuser/cloud /home/mpiuser/cloud
 echo master:/home/mpiuser/cloud /home/mpiuser/cloud/ nfs | tee --append /etc/fstab
 

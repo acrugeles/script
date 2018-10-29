@@ -10,6 +10,7 @@ echo ..................................................
 #sudo pip install mpi4py
 
 apt-get install -y build-essential
+add-apt-repository universe
 apt-get install -y openssh-server
 apt-get install -y nfs-kernel-server
 apt-get install -y nfs-common

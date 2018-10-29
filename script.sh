@@ -17,7 +17,8 @@ apt-get install -y nfs-common
 
 apt autoremove -y python
 apt-get install -y python-setuptools
-apt-get install -y python-dev python-pip
+apt-get install -y python-dev 
+apt-get install -y python-pip
 pip install mpi4py
 
 wget http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1.tar.gz

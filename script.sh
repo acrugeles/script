@@ -41,7 +41,7 @@ sudo adduser mpiuser
 sudo usermod -aG sudo,adm mpiuser
 sudo -i -u mpiuser ssh-keygen -b 4096 -C "" -P "" -f "/home/mpiuser/.ssh/id_rsa" -q
 sudo -i -u mpiuser ssh-copy-id master
-sudo -i -u mpiuser ssh master "echo maquina4 | sudo -S -- sh -C 'echo $concat >> /etc/hosts'"
+sudo -i -u mpiuser ssh master "echo maquina4 | sudo -S -- sh -c 'echo $concat >> /etc/hosts'"
 echo .................................................
 mkdir /home/mpiuser/cloud
 sudo mount -t nfs master:/home/mpiuser/cloud /home/mpiuser/cloud
